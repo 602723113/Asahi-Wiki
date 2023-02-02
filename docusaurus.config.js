@@ -71,7 +71,7 @@ const config = {
           },
           {
             type:'doc',
-            docId: 'attribute_intro',
+            docId: 'attribute_system/attribute_intro',
             position: 'left',
             label: 'AttributeSystem',
           },
