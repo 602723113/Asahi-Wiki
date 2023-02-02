@@ -65,7 +65,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'asahi/intro',
+            docId: 'asahi/asahi',
             position: 'left',
             label: 'Asahi',
           },
