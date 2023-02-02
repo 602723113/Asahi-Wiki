@@ -70,11 +70,9 @@ const config = {
             label: 'Asahi',
           },
           {
-            type: 'doc',
-            docId: 'intro',
+            to: '/attribute',
             position: 'left',
             label: 'AttributeSystem',
-            to: '/attribute',
           },
           {to: '/blog', label: '灵感', position: 'left'},
           {
