@@ -70,8 +70,8 @@ const config = {
             label: 'Asahi',
           },
           {
-            type:'doc'
-            docId: 'attribute_intro'
+            type:'doc',
+            docId: 'attribute_intro',
             position: 'left',
             label: 'AttributeSystem',
           },
