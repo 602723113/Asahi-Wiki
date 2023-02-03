@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Asahi - Wiki',
   tagline: 'Everything comes from Asahi.',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://glomc.vercel.app/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Glom-c', // Usually your GitHub org/user name.
+  projectName: 'Asahi Wiki', // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -73,7 +73,7 @@ const config = {
             type:'doc',
             docId: 'attribute_system/attribute_intro',
             position: 'left',
-            label: 'AttributeSystem',
+            label: 'AttributeSystem2',
           },
           {to: '/blog', label: '灵感', position: 'left'},
           {
