@@ -1,8 +1,8 @@
 {
   "label": "基础内容",
-  "position": 1,
+  "position": 2,
   "link": {
     "type": "generated-index",
-    "description": "5 minutes to learn the most important Docusaurus concepts."
+    "description": "这里介绍一些Asahi中的基本概念和工作原理"
   }
 }
