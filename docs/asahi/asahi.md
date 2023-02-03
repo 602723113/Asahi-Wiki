@@ -3,10 +3,14 @@ sidebar_position: 1
 title: Asahi
 id: asahi
 ---
+
 Asahi 是由 Glom-c 所开发的基于 Taboolib 的、高速编译执行的动态脚本语言。通过调度器+处理器的事件处理系统和前缀、中缀解释器，Asahi以简单的语句、
 优良的性能实现诸如定时任务、原版和其他插件的机制修改等本需要编写插件才能实现的内容。
+
 ---
+
 对于一些可扩展API，**Pouvoir** 提供了脚本拓展
+
 并使用脚本注解进行自动注册注销
 
 详细请见WIKI
@@ -14,7 +18,6 @@ Asahi 是由 Glom-c 所开发的基于 Taboolib 的、高速编译执行的动�
 #### Asahi 前缀解释器拓展 (Asahi Prefix Parser Extension)
 
 ```javascript
-
 //@AsahiPrefix(-name example)
 function example(lexer) {
     var numberQuester = lexer.questDouble()
