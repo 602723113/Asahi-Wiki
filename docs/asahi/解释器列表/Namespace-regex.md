@@ -4,14 +4,18 @@ title: Namespace-regex
 tags:
 - 解释器列表
 ---
+
 ## 前缀解释器
 ---
+
 ### 正则
 #### **regexOf**
 创建正则对象，用于接下来的匹配
+
 regexOf 正则表达式 匹配设置(Set<RegexOption>) 
 #### **regex**
 同regexOf
+
 regex of 正则表达式
 
 ```yaml
@@ -24,6 +28,7 @@ regex 正则表达式 replace 值(String) with 值(String) #替换
 ## 中缀解释器
 ---
 
+### 正则
 #### **[MatchResult](https://www.liaoxuefeng.com/wiki/1252599548343744/1306046706483233)操作**
 ```yaml
 matchResult value #匹配到的值
