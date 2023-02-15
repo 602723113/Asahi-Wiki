@@ -14,8 +14,9 @@ tags:
 ### 正则
 #### **regexOf**
 创建正则对象，用于接下来的匹配
-
-regexOf 正则表达式 匹配设置(Set<RegexOption>) 
+```yaml
+regexOf 正则表达式 匹配设置(<RegexOption>)
+``` 
 #### **regex**
 同regexOf
 
