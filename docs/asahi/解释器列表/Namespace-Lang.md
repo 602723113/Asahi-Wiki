@@ -2,6 +2,7 @@
 sidebar_position: 1
 title: Namespace-Lang
 tags:
+- Asahi
 - 解释器列表
 ---
 
