@@ -77,7 +77,7 @@ set neige = "南山道人"
 set glom ifdef = "咕咕咕"
 #set 变量名 by lazy =(to) 代码块  类似Kotlin中的 by lazy 只有在获取时才执行代码块中的内容并取值
 set zimaBlue by lazy = {
-  print("诗远")
+  print "诗远"
   return "紫马布鲁"
 }
 
@@ -95,21 +95,119 @@ if has glom then {
 }
 ```
 
-### 流程控制
+### 流程控制-条件
 
 #### **if**
-
+if都不会用就紫砂吧
+```yaml
+if check 1 < 2 then {
+  print "1显然小于2"
+} else {
+  print "数学不存在了"
+}
+```
 #### **condition**
 
 #### **switch(when)**
+```yaml
+print switch of "Glom" {
+  case == "Glom" -> "咕咕咕"
+  else -> "Glom!"
+}
+```
 
+### 流程控制-循环
+
+#### **_label_**
+任何循环都可以加入label(标签)用于标识循环
+```yaml
+#这里如果不写标签，break就会产生歧义
+repeat 1 with index label "outer" then {
+  while check &entity health > 0 label "inner" then {
+    damage &entity 1
+    if check &entity velocity == 0 then {
+      break "inner"
+    }
+  }
+}
+```
 #### **while**
-
+```yaml
+while check &entity health > 0 then {
+  damage &entity 1
+}
+```
 #### **repeat**
-
+指定循环间隔，并提供循环次数
+repeat 间隔 with 次数变量
+```yaml
+repeat 1 with index label "outer" then {
+  print "循环，第 ${&index} 次"
+}
+```
 #### **for(foreach)**
+用于遍历集合
+```yaml
+set array = [ "唧唧复唧唧" , "木兰当户织" , "问女何所思" , "问女何所忆" ]
+for poem in array then {
+  print &poem
+}
+```
+### 数字操作
 
+abs 值(Number)
+
+ceil 值(Double) 向上取整
+
+floor 值(Double) 向下取整
+
+round 值(Double) 四舍五入取整
+
+format 值(Number) 格式(String) 格式化数字 格式类似"#.##"
+
+max 值 to 值 返回二者之间的最大值
+
+min 值 to 值 返回二者之间的最小值
+
+max 值数组 返回数组中最大值
+
+min 值数组 返回数组中最大值
+
+range 值(Double) to/~/.. 值(Double)  返回一个范围
+
+number 值 将值转换为数值
 ### 数学运算
+三角函数名 值(弧度制)
+
+sin cos tan asin acos atan 
+
+对数函数名 底数值 值
+
+log 3 9
+
+ln 9 
+
+lg 10
+
+log2 8
+### 随机数
+#### **random**
+random 值(Double) to 值(Double)
+
+randomInt 值(Int) to 值(Int)
+
+randomObj 值(List) 从集合里随机取一个元素
+
+#### **weight**
+带权重随机
+
+weight [ 权重(Int) to 值 , 权重(Int) to 值 ] 直接取出随机后的值
+
+weight [ 权重(Int) to 值 , 权重(Int) to 值 ] build 类似lazy，返回taboolib.common5.RandomList 需要取值时调用其random函数 ~~(这玩意有什么意义...)~~
+```yaml
+print weight [ 10 to "Glom" , 20 to "Neige" , 20 to "紫马布鲁" ]
+
+```
 
 ### Java对接
 
