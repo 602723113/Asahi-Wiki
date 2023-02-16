@@ -201,79 +201,79 @@ x y z 为碰撞箱各坐标轴上长度的1/2
 ### Location操作
 
 #### **toVector**
-
+Location转Vector
 ```yaml
-&location 
+&location toVector #返回Vector
 ```
 #### **distance**
-
+获取两坐标间距
 ```yaml
-&location 
+&location distance 另一个坐标(Location)
 ```
 #### **direction**
-
+获取/修改坐标的方向
 ```yaml
-&location 
+&location direction #获取坐标的方向
+&location direction to 向量(Vector) #修改坐标的方向
 ```
 #### **multiply**
-
+让Location所有参数乘以一个数
 ```yaml
-&location 
+&location multiply 数值(Double)
 ```
 #### **length**
-
+即到原点距离(x^2+y^2+z^2)^(1/2)
 ```yaml
-&location 
+&location length
 ```
 #### **clone**
+复制一个新的Location对象
 
+直接修改获取来的Location对象会导致Location所属实体位置改变
 ```yaml
-&location 
+&location clone
 ```
 #### **world**
-
+获取该坐标所在世界
 ```yaml
-&location 
+&location world
 ```
 #### **pitch**
-
+获取该坐标朝向的pitch
 ```yaml
-&location 
+&location pitch
 ```
 #### **yaw**
-
+获取该坐标朝向的yaw
 ```yaml
-&location 
+&location yaw
 ```
-#### **x**
-
+#### **x,y,z**
+获取/修改x,y,z
 ```yaml
-&location 
-```
-#### **y**
-
-```yaml
-&location 
-```
-#### **z**
-
-```yaml
-&location 
+&location x 
+&location y
+&location z
+&location x to 值(Double)
+&location y to 值(Double)
+&location z to 值(Double)
 ```
 #### **add**
-
+做向量加运算
 ```yaml
-&location 
+&location add [ x(Double) , y(Double) , z(Double) ]
+&location add 值(Location/Vector)
 ```
 #### **subtract**
-
+做向量减运算
 ```yaml
-&location 
+&location subtract [ x(Double) , y(Double) , z(Double) ]
+&location subtract 值(Location/Vector)
 ```
 #### **zero**
-
+把坐标变成零向量
 ```yaml
-&location 
+&location zero
 ```
 
 
@@ -395,3 +395,7 @@ x y z 为碰撞箱各坐标轴上长度的1/2
 
 ```
 #### **zero**
+
+```yaml
+
+```
