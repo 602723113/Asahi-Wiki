@@ -402,3 +402,12 @@ z = x1 * y2 - x2 * y1
 ```yaml
 &vector zero
 ```
+
+### Cancellable操作
+#### **isCancelled**
+获取/修改事件是否被取消
+
+```yaml
+&event isCancelled
+&event isCancelled to 布尔(Boolean)
+```
