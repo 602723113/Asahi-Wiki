@@ -279,123 +279,126 @@ Location转Vector
 
 ### Vector操作
 
-#### **rotateAroundX**
-
+#### **rotateAround**
+让向量以指定坐标轴为轴旋转
 ```yaml
-
-```
-#### **rotateAroundY**
-
-```yaml
-
-```
-#### **rotateAroundZ**
-
-```yaml
-
+&vector rotateAroundX 弧度制角度(Double)
+&vector rotateAroundY 弧度制角度(Double)
+&vector rotateAroundZ 弧度制角度(Double)
 ```
 #### **toLocation**
-
+向量转坐标
 ```yaml
-
+&vector toLocation
 ```
 #### **normalize**
-
+转为单位向量
 ```yaml
-
+&vector normalize
 ```
 #### **isNormalized**
-
+是否为单位向量
 ```yaml
-
+&vector isNormalized
 ```
 #### **isInSphere**
-
+是否在特定球体内
 ```yaml
-
+&vector isInSphere 原点(Vector) 半径(Double)
 ```
 #### **isInAABB**
+判断本向量是否在一个与坐标轴平行的长方体碰撞箱中.
 
+参数 min 和 max 必须是正确的最小坐标和最大坐标,也就是说必须是能构成长方体的对角点.
 ```yaml
-
+&vector isInAABB min(Vector) max(Vector)
 ```
 #### **midpoint**
-
+顾名思义，获取一个新的向量,它的值为本向量和另一个向量间的连线的中点.
 ```yaml
-
+&vector midpoint 另一个向量(Vector)
 ```
 #### **dot**
-
+计算本向量与另一个向量的点积,定义为x1*x2+y1*y2+z1*z2. 此函数的返回值是个标量.
 ```yaml
-
+&vector dot 另一个向量(Vector)
 ```
 #### **divide**
-
+将本向量的坐标除以另一个向量的坐标.
 ```yaml
-
+&vector divide 另一个向量(Vector)
 ```
 #### **distance**
-
+获取本向量与与另一个向量之间的距离. 这个方法的返回值没有被缓存,且使用了开销较大的平方以及开根函数, 所以不要反复调用这个方法来获取向量的模值. 当向量的模过大时,开根函数有可能发生溢出,并会返回Double.NaN.
 ```yaml
-
+&vector distance 另一个向量(Vector)
 ```
 #### **crossProduct**
+将本向量的坐标设为两个向量的叉积.
 
+其计算过程如下:
+
+x = y1 * z2 - y2 * z1
+
+y = z1 * x2 - z2 * x1
+
+z = x1 * y2 - x2 * y1
+
+注:叉积是a向量和b向量的垂直向量的积的模,方向使用右手定则判断.
 ```yaml
-
+&vector crossProduct 另一个向量(Vector)
 ```
 #### **copy**
-
+将本向量的坐标全部设为另一个向量的坐标.
 ```yaml
-
+&vector 另一个向量(Vector)
 ```
 #### **angle**
-
+获取本向量与另一个向量的夹角,用弧度表示.
 ```yaml
-
+&vector angle 另一个向量(Vector)
 ```
 #### **multiply**
-
+让Vector所有参数乘以一个数
 ```yaml
-
+&vector multiply 数值(Double)
 ```
 #### **length**
-
+即到原点距离(x^2+y^2+z^2)^(1/2)
 ```yaml
-
+&vector length
 ```
 #### **clone**
+复制一个新的Vector对象
 
+直接修改获取来的Vector对象会导致Vector所属实体位置改变
 ```yaml
-
+&vector clone
 ```
-#### **x**
-
+#### **x,y,z**
+获取/修改x,y,z
 ```yaml
-
-```
-#### **y**
-
-```yaml
-
-```
-#### **z**
-
-```yaml
-
+&vector x 
+&vector y
+&vector z
+&vector x to 值(Double)
+&vector y to 值(Double)
+&vector z to 值(Double)
 ```
 #### **add**
-
+做向量加运算
 ```yaml
-
+&vector add [ x(Double) , y(Double) , z(Double) ]
+&vector add 值(Location/Vector)
 ```
 #### **subtract**
-
+做向量减运算
 ```yaml
-
+&vector subtract [ x(Double) , y(Double) , z(Double) ]
+&vector subtract 值(Location/Vector)
 ```
 #### **zero**
-
+把向量变成零向量
 ```yaml
-
+&vector zero
 ```
