@@ -241,17 +241,17 @@ UserBased是一种基于用户的容器
 一一对应，username key不可重复
 eg.
 | username | key | value |
-| ------ | ----------- |
+| -------- | ------ | --------------- |
 | Glom   | 马内 | -100 |
 | Glom   | 状态 | 上学 |
 | Glom   | 作品 | Pouvoir,AttributeSystem,BuffSystem... |
 :::
 ```yaml
 #[]内为可选参数
-userdata [of 值(UserBased)] user set
-userdata [of 值(UserBased)] user get
-userdata [of 值(UserBased)] user contains
-userdata [of 值(UserBased)] user delete
+userdata [of 值(UserBased)] user set key to value #若不填入of 值(UserBased)则使用Pouvoir自带容器
+userdata [of 值(UserBased)] user get key
+userdata [of 值(UserBased)] user contains key
+userdata [of 值(UserBased)] user delete key
 ```
 ### 工具
 
