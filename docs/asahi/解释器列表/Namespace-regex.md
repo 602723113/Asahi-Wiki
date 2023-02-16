@@ -12,10 +12,11 @@ tags:
 ---
 
 ### 正则
+正则相关知识: [跟着海螺学正则](https://www.mcbbs.net/thread-827651-1-1.html)
 #### **regexOf**
 创建正则对象，用于接下来的匹配
 ```yaml
-regexOf 正则表达式 匹配设置(<RegexOption>)
+regexOf 正则表达式 匹配设置(Set<RegexOption>)
 ``` 
 #### **regex**
 同regexOf

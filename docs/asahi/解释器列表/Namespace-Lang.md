@@ -226,9 +226,106 @@ java of com.skillw.pouvoir.util.EntityUtil
 ```yaml
 new ItemStack ( Material.AIR )
 ```
+### 持久化容器
+持久化容器用于存储一些不会在服务器关闭/玩家退出后消失的数据。
+持久化容器依靠数据库，存储表格式(有行和列)的数据结构
+#### **userdata**
+操作UserBased类型的容器
+:::tip UserBased
+UserBased是一种基于用户的容器
 
-### 调试
+其容器特征有：
+
+列名只有 username key value
+
+一一对应，username key不可重复
+eg.
+| username | key | value |
+| ------ | ----------- |
+| Glom   | 马内 | -100 |
+| Glom   | 状态 | 上学 |
+| Glom   | 作品 | Pouvoir,AttributeSystem,BuffSystem... |
+:::
+```yaml
+#[]内为可选参数
+userdata [of 值(UserBased)] user set
+userdata [of 值(UserBased)] user get
+userdata [of 值(UserBased)] user contains
+userdata [of 值(UserBased)] user delete
+```
+### 工具
+
 #### **debug**
+```yaml
+debug on compile #开启编译时调试
+debug on eval #开启执行时调试
+debug off compile #关闭编译时调试
+debug off eval #关闭执行时调试
+debug context #获取上下文
+debug bean info #显示所有AsahiClassBean(com.skillw.asahi.internal.util.AsahiClassBean)信息 
+debug bean info of 类名 #显示特定AsahiClassBean信息
+debug bean load 类名 #加载特定AsahiClassBean并返回
+#还有一堆，想看自己翻源码(com.skillw.asahi.internal.namespacing.prefix.lang.util.PrefixDebug)看吧，大部分人也就用用前两个了
+```
+#### **gson**
+```yaml
+gson encode 值 #将特定对象序列化为gson文本
+gson decode 值(String) of 类型 #将gson文本反序列化为特定类型的对象
+```
+#### **analysis(inline)**
+解析文本中的Asahi 例如:
 
+"测试Asahi: {random 0 to 1}" 返回: "测试Asahi: 0.88"
+```yaml
+#目前有更加快捷的方式来实现字符串解析——字符串模板
+test: |-
+  inline "测试Asahi: {random 0 to 1}"
+  inline all [ "测试Asahi: {random 0 to 1}" , "测试Asahi2: {random 0 to 1}" ]
+```
+#### **type**
+强转类型
+```kotlin
+//type 类型 值
+//type double 10
+//类型表
+when (type.get()) {
+    "double" -> Coerce.toDouble(obj)
+    "int" -> Coerce.toInteger(obj)
+    "long" -> Coerce.toLong(obj)
+    "float" -> Coerce.toFloat(obj)
+    "short" -> Coerce.toShort(obj)
+    "byte" -> Coerce.toByte(obj)
+    "bool" -> Coerce.toBoolean(obj)
+    "char" -> Coerce.toChar(obj)
+    "string" -> Coerce.toString(obj)
+    else -> obj
+}
+```
+#### **date**
+返回当前时间
+```kotlin
+//date in 时间单位 
+//时间单位
+when (typeGetter.get()?.lowercase()) {
+    "year" -> "yyyy"
+    "month" -> "MM"
+    "day" -> "dd"
+    "time" -> "HH:mm:ss"
+    "timeDetail" -> "HH:mm:ss.SSS"
+    else -> "yyyy年MM月dd日 HH:mm:ss"
+}
+```
+#### **time**
+返回当前时间
+```yaml
+time as 时间格式
+yyyy为年 MM为月 dd为日 HH小时 mm分钟 ss秒 SSS毫秒
+time as "yyyy年MM月dd日 HH:mm:ss"
+```
+#### **currentTick**
+返回当前tick
+```yaml
+currentTick
+```
 ## 中缀解释器
 ---
