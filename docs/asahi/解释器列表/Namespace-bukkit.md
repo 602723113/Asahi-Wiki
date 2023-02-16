@@ -119,11 +119,162 @@ MetaData是一种存储临时数据(关服、退服后会消失)的可选方案
 &player metadata key(String) #返回玩家特定key下的MataDataValue
 &player metadata key(String) to value(MetaDataValue) #返回玩家特定key下的MataDataValue
 ```
-### Vector操作
+### Entity操作
+
+#### **location**
+获取实体位置
+```yaml
+&entity location #获取实体位置
+```
+#### **teleport**
+传送实体
+```yaml
+&entity teleport to 目标(Location / Entity)
+```
+#### **name**
+获取实体名字
+```yaml
+&entity name
+```
+#### **displayName**
+获取实体显示名字
+```yaml
+&entity displayName
+```
+#### **velocity**
+获取/修改实体速度
+```yaml
+&entity velocity #获取实体速度
+&entity velocity to 向量(Vector) #设置实体速度
+```
+#### **metadata**
+获取/修改实体[MetaData](https://jd.bukkit.org/org/bukkit/metadata/Metadatable.html)
+
+MetaData是一种存储临时数据(关服、退服后会消失)的可选方案
+```yaml
+&entity metadata key(String) #返回实体特定key下的MataDataValue
+&entity metadata key(String) to value(MetaDataValue) #返回实体特定key下的MataDataValue
+```
+#### **fireTicks**
+获取/修改实体燃烧时间，以tick为单位
+```yaml
+&entity fireTicks #获取实体燃烧时间
+&entity fireTicks to 时间(Int) #设置实体燃烧时间
+```
+#### **fallDistance**
+获取/修改实体摔落距离
+```yaml
+&entity fallDistance #获取实体摔落距离
+&entity fallDistance to 时间(Int) #设置实体摔落距离
+```
+### LivingEntity操作
+
+#### **health**
 
 ```yaml
-
+&livingEntity
 ```
+#### **maxHealth**
+
+```yaml
+&livingEntity
+```
+#### **potion**
+
+```yaml
+&livingEntity
+```
+#### **nearbyEntities**
+
+```yaml
+&livingEntity
+```
+#### **rayHitEntity**
+
+```yaml
+&livingEntity
+```
+### Location操作
+
+#### **toVector**
+
+```yaml
+&location 
+```
+#### **distance**
+
+```yaml
+&location 
+```
+#### **direction**
+
+```yaml
+&location 
+```
+#### **multiply**
+
+```yaml
+&location 
+```
+#### **length**
+
+```yaml
+&location 
+```
+#### **clone**
+
+```yaml
+&location 
+```
+#### **world**
+
+```yaml
+&location 
+```
+#### **pitch**
+
+```yaml
+&location 
+```
+#### **yaw**
+
+```yaml
+&location 
+```
+#### **x**
+
+```yaml
+&location 
+```
+#### **y**
+
+```yaml
+&location 
+```
+#### **z**
+
+```yaml
+&location 
+```
+#### **add**
+
+```yaml
+&location 
+```
+#### **subtract**
+
+```yaml
+&location 
+```
+#### **zero**
+
+```yaml
+&location 
+```
+
+
+### Vector操作
+
 #### **rotateAroundX**
 
 ```yaml
