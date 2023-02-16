@@ -170,29 +170,33 @@ MetaData是一种存储临时数据(关服、退服后会消失)的可选方案
 ### LivingEntity操作
 
 #### **health**
-
+获取/修改实体生命值
 ```yaml
-&livingEntity
+&entity health #获取实体生命值
+&entity health to 血量(Int) #设置实体生命值
 ```
 #### **maxHealth**
-
+获取/修改实体最大生命值
 ```yaml
-&livingEntity
+&entity maxHealth #获取实体最大生命值
+&entity maxHealth to 血量(Int) #设置实体最大生命值
 ```
 #### **potion**
-
+给实体药水效果[XPotion](https://github.com/TabooLib/taboolib/blob/501ad4cb34a2b6bc8cb5302f30fe1b824eb80706/platform/platform-bukkit/src/main/java/taboolib/library/xseries/XPotion.java)
 ```yaml
-&livingEntity
+&livingEntity potion add 药水(XPotion)
 ```
 #### **nearbyEntities**
+获取周围以实体为中心的一个碰撞箱内的实体
 
+x y z 为碰撞箱各坐标轴上长度的1/2
 ```yaml
-&livingEntity
+&livingEntity nearbyEntities x(Double) y(Double) z(Double)
 ```
 #### **rayHitEntity**
-
+获取实体视线方向的实体
 ```yaml
-&livingEntity
+&livingEntity rayHitEntity 距离(Double)
 ```
 ### Location操作
 
