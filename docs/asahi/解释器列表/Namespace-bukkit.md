@@ -10,7 +10,31 @@ tags:
 
 ## 前缀解释器
 ---
+前缀解释器与旧版内联函数大致相同
+### 基础
 
+#### **颜色**
+```yaml
+colored 文本(String) #给文本加上颜色 & -> §
+decolored 文本(String) #给加上颜色的文本变回去 § -> &
+uncolored 文本(String) #去除文本的颜色 '§' -> ''
+```
+#### **指令**
+```yaml
+command 文本(String) as op 玩家(Player) #让玩家以op权限执行指令
+command 文本(String) as console #控制台执行指令
+command 文本(List<String>) as op 玩家(Player) #让玩家以op权限执行一系列指令
+command 文本(List<String>) as console #控制台执行一系列指令
+```
+#### **papi(placeholder) **
+```yaml
+papi of 实体(LivingEntity) 文本(String) #解析占位符(PouPAPI & PAPI),解析Asahi语句
+```
+### 物品
+#### **material**
+```yaml
+material 物品Id(String) #获取指定材质枚举
+```
 ## 中缀解释器
 ---
 
@@ -410,4 +434,50 @@ z = x1 * y2 - x2 * y1
 ```yaml
 &event isCancelled
 &event isCancelled to 布尔(Boolean)
+```
+### BossBar操作
+
+#### **title**
+获取/修改bossbar的title
+```yaml
+&bossbar title #获取bossbar的title
+&bossbar title to title(String) #修改bossbar的title
+```
+#### **color**
+获取/修改bossbar的颜色
+```yaml
+&bossbar color #获取bossbar的color
+&bossbar color to color(org.bukkit.boss.BarColor) #修改bossbar的color
+```
+#### **style**
+获取/修改bossbar的风格
+```yaml
+&bossbar style #获取bossbar的style
+&bossbar style to style(org.bukkit.boss.BarStyle) #修改bossbar的style
+```
+#### **progress**
+获取/修改bossbar的进度
+```yaml
+&bossbar progress #获取bossbar的progress
+&bossbar progress to progress(Double) #修改bossbar的progress
+```
+#### **visible**
+获取/修改bossbar是否可见
+```yaml
+&bossbar visible #获取bossbar是否可见
+&bossbar visible to 布尔(Boolean) #修改bossbar是否可见
+```
+#### **flag**
+获取/修改bossbar的flag
+```yaml
+&bossbar flag has flag(org.bukkit.boss.BarFlag) #获取bossbar是否有特定flag
+&bossbar flag add flag(org.bukkit.boss.BarFlag) #添加bossbar的flag
+&bossbar flag remove flag(org.bukkit.boss.BarFlag) #移除bossbar的flag
+```
+#### **player**
+修改bossbar对指定玩家可见性
+```yaml
+&bossbar player add 玩家(Player)
+&bossbar player remove 玩家(Player)
+&bossbar player removeAll 玩家(Player)
 ```
