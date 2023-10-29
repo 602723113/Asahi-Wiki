@@ -63,3 +63,5 @@ JavaDoc [http://doc.skillw.com/pouvoir/](http://doc.skillw.com/pouvoir/)
 MCBBS [https://www.mcbbs.net/thread-1221977-1-1.html](https://www.mcbbs.net/thread-1221977-1-1.html)
 
 爱发电 [https://afdian.net/@glom\_](https://afdian.net/@glom_)
+
+Asahi附属 [点击进入](https://github.com/q210520993/Javascript-about-Minecraft)
